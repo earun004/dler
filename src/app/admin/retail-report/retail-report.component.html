@@ -1,0 +1,70 @@
+<div class="page_title">
+    <span class="mob_page_close cPointer text-light h5"><i class="fas fa-arrow-left"></i></span>
+    <h6 class="text-dark text-center">Retailer Management</h6>
+</div>
+<div class="page_content table-responsive">
+    <div class="report_filter_box" style="min-width:1100px;">
+        <div class="alert alert-success">
+            <form action="">
+                <div class="filter_items_box">
+                    <div class="form-group filter_item">
+                        <label for="" class="w-100 text-center">Retailer Name*</label>
+                        <input type="text" class="form-control" placeholder="Retailer Name" required >
+                    </div>
+                    <div class="form-group filter_item">
+                        <label for="" class="w-100 text-center">Location*</label>
+                        <input type="number" class="form-control" placeholder="Location" required >
+                    </div>
+                    <div class="form-group filter_item">
+                        <label for="" class="w-100 text-center">Town*</label>
+                        <input type="text" class="form-control" placeholder="Town" required >
+                    </div>
+                    <div class="form-group filter_item">
+                        <label for="" class="w-100 text-center">District*</label>
+                        <input type="text" class="form-control" placeholder="District" required >
+                    </div>
+                    <div class="form-group filter_item">
+                        <label for="" class="w-100 text-center">Phone*</label>
+                        <input type="text" class="form-control" placeholder="Phone" required >
+                    </div>
+                    <div class="form-group filter_item">
+                        <label for="" class="w-100 text-center">E-mail*</label>
+                        <input type="email" class="form-control" placeholder="E-mail" required >
+                    </div>
+                    <div class="form-group filter_item pl-1 mt-4 pt-1" style="min-width:fit-content !important;">
+                        <button type="submit" class="btn btn-primary bg_self" onclick="return confirm('Are you confirm?');"><i class="fas fa-search"></i> Search</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <table class="table table-striped reportTable">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col" class="text-center">Distributor Name</th>
+                <th scope="col" class="text-center">City</th>
+                <th scope="col" class="text-center">Address</th>
+                <th scope="col" class="text-center">Brands</th>
+                <th scope="col" class="text-center">Phone</th>
+                <th scope="col" class="text-center">E-mail</th>
+                <th scope="col" class="text-center">Status</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr *ngFor="let user of users">
+                <td>{{user.NAME}}</td>
+                <td>{{user.CITY}}</td>
+                <td>{{user.ADDRESS}}</td>
+                <td>{{user.BUSINESS_NAME}}</td>
+                <td>{{user.MOBILE}}</td>
+                <td>{{user.EMAIL_ID}}</td>
+                <td>
+                    <a href="#" class="btn btn-sm btn-success" *ngIf="user.STATUS=='ACTIVE'" onclick="return confirm('Are you confirm?');">Active</a>
+                    <a href="#" class="btn btn-sm btn-danger" *ngIf="user.STATUS=='INACTIVE'" onclick="return confirm('Are you confirm?');">Inactive</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

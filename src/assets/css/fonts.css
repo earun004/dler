@@ -1,0 +1,92 @@
+ /*
+font-family: averiaSerifLibre-boldItalic;
+font-family: averiaSerifLibre-lightItalic;
+font-family: chango-regular;
+font-family: coiny-regular;
+font-family: comfortaa-variableFont_wght;
+font-family: daysOne-regular;
+font-family: 'fasterOne-regular';
+font-family: 'fredokaOne-regular';
+font-family: lemon-regular;
+font-family: luckiestGuy-regular;
+font-family: poiretOne-regular;
+font-family: righteous-regular;
+font-family: 'russoOne-regular';
+font-family: jetBrainsMono-variableFont_wght;
+font-family: jetBrainsMono-Italic-variableFont_wght;
+font-family: 'akayaKanadaka-regular'; 
+font-family: courgette-regular;
+*/
+
+@font-face {
+  font-family: "averiaSerifLibre-boldItalic";
+  src: url("../fonts/AveriaSerifLibre-BoldItalic.woff");
+}
+@font-face {
+  font-family: "averiaSerifLibre-lightItalic";
+  src: url("../fonts/AveriaSerifLibre-LightItalic.woff");
+}
+@font-face {
+  font-family: "chango-regular";
+  src: url("../fonts/Chango-Regular.woff");
+}
+@font-face {
+  font-family: "coiny-regular";
+  src: url("../fonts/Coiny-Regular.woff");
+}
+@font-face {
+  font-family: "comfortaa-variableFont_wght";
+  src: url("../fonts/Comfortaa-VariableFont_wght.woff");
+}
+@font-face {
+  font-family: "daysOne-regular";
+  src: url("../fonts/DaysOne-Regular.woff");
+}
+@font-face {
+  font-family: "fasterOne-regular";
+  src: url("../fonts/FasterOne-Regular.woff");
+}
+@font-face {
+  font-family: "fredokaOne-regular";
+  src: url("../fonts/FredokaOne-Regular.woff");
+}
+@font-face {
+  font-family: "lemon-regular";
+  src: url("../fonts/Lemon-Regular.woff");
+}
+@font-face {
+  font-family: "luckiestGuy-regular";
+  src: url("../fonts/LuckiestGuy-Regular.woff");
+}
+@font-face {
+  font-family: "modules";
+  src: url("../fonts/modules.woff");
+}
+@font-face {
+  font-family: "poiretOne-regular";
+  src: url("../fonts/PoiretOne-Regular.woff");
+}
+@font-face {
+  font-family: "righteous-regular";
+  src: url("../fonts/Righteous-Regular.woff");
+}
+@font-face {
+  font-family: "russoOne-regular";
+  src: url("../fonts/RussoOne-Regular.woff");
+}
+@font-face {
+  font-family: "jetBrainsMono-variableFont_wght";
+  src: url("../fonts/JetBrainsMono-VariableFont_wght.woff");
+}
+@font-face {
+  font-family: "jetBrainsMono-Italic-variableFont_wght";
+  src: url("../fonts/JetBrainsMono-Italic-VariableFont_wght.woff");
+}
+@font-face {
+  font-family: "akayaKanadaka-regular";
+  src: url("../fonts/AkayaKanadaka-Regular.woff");
+}
+@font-face {
+  font-family: "courgette-regular";
+  src: url("../fonts/Courgette-Regular.woff");
+}

@@ -1,0 +1,28 @@
+<div class="main_section">
+    <div class="login_page">
+        <div class="login_wrapper">
+            <div class="login_box">
+                <div class="login_box_item">
+                    <div class="login_logo text-center">
+                        <img src="./assets/images/logo.png" alt="Logo" />
+                    </div>
+                    <div class="login_form">
+                        <div class="h4 text-light font-weight-bold pb5">Login</div>
+                        <form action="./index.html" [formGroup]="loginForm">
+                            <div class="form-group">
+                                <input type="email" name="username" formControlName="username" class="form-control" placeholder="Username" required />
+                            </div>
+                            <div class="form-group">
+                                <input type="password" name="pwd" formControlName="password" class="form-control" placeholder="Password" required />
+                            </div>
+                            <div class="form-group text-center">
+                                <input type="submit" name="login" [disabled]="!loginForm.valid" value="Login" (click) = "login()" class="loginBtn btn btn-light" />
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,50 @@
+<div class="main_body mobile_page">
+    <div class="page_title">
+        <span class="mob_page_close cPointer text-light h5"><i class="fas fa-arrow-left"></i></span>
+        <h6 class="text-dark text-center">Change Password</h6>
+    </div>
+    <div class="registration_page">
+        <div class="login_wrapper">
+            <div class="login_box">
+                <div class="login_box_item">
+                    <div class="login_logo text-center">
+                        <img src="./assets/images/logo.png" alt="Logo" />
+                    </div>
+                    <div class="login_form">
+                        
+                        <form action="">
+                            <div class="reset_pwd_box">
+                                <div class="reset_pwd_sub_itm has_radio">
+                                    <label for="" class="text-light cPointer">Phone Number</label>
+                                </div>
+
+                                <div class="reset_pwd_sub_itm has_radio_box">
+                                    <input type="text" name="phone" [(ngModel)]="phone" class="form-control" placeholder="Phone Number" required >
+                                </div>
+                                <div class="reset_pwd_sub_itm has_radio">
+                                    <label for="ver_typ_phone" class="text-light cPointer">New Password</label>
+                                </div>
+                                <div class="reset_pwd_sub_itm has_radio_box">
+                                    <input type="password" name="pwd" class="form-control" [(ngModel)]="newpassword" placeholder="Password" required >
+                                </div>
+                                <div class="reset_pwd_sub_itm has_radio">
+                                    <label for="ver_typ_phone" class="text-light cPointer">Confirm Password</label>
+                                </div>
+                                <div class="reset_pwd_sub_itm has_radio_box">
+                                    <input type="password" name="reTypepwd" class="form-control" [(ngModel)]="repassword" placeholder="RetypeNew Password" required >
+                                </div>
+                            </div>
+                            <div class="form-group text-center pt-3">
+                                <input type="submit" name="reset" (click)="resetPassword()" [disabled]="!(phone && newpassword && repassword && (newpassword == repassword))" value="Submit" class="recovery_submit_btn btn btn-sm btn-light" >
+                            </div>
+                            <div class="form-group text-center dNone">
+                                <span class="text-light">Password succesfully reset.</span>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</div>

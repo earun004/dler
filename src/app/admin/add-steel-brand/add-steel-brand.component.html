@@ -1,0 +1,37 @@
+
+        <div class="page_title">
+            <span class="mob_page_close cPointer text-light h5"><i class="fas fa-arrow-left"></i></span>
+            <h6 class="text-dark text-center">Add Brands</h6>
+        </div>
+        <div class="page_content">
+            <div class="master_add_box">
+                <div class="master_add_items">
+                    <div class="master_add_item_box">
+                    
+                       
+                        
+                        <form action="">
+                            <div class="master_add_group_box" data-box-count="2" data-input-name="brandName">
+                                <div class="form-group master_add_group">
+                                    <label for="">Brand Name*</label>
+                                    <input type="text" name="brandName1" [(ngModel)]="brand.BRAND" class="form-control" placeholder="Brand Name" required >
+                                    <span class="btn btn-sm btn-light sm_add_item_add"><i class="fas fa-plus"></i></span>
+                                </div>
+                            </div>
+                            <div class="form-group text-center">
+                                <input type="submit" name="" value="Submit" [disabled]="!brand.BRAND" class="btn btn-sm btn-light" (click)="addBrand()" >
+                            </div>
+                        </form>
+                         <!-- increase box do not delete start -->
+                         <div class="sm_inc_html_data_box">
+                            <div class="form-group master_add_group" *ngFor="let brand of brands; let i = index">
+                                <label for="">Brand Name*</label>
+                                <input type="text" name="brandName2" value="{{brand.BRAND}}" [attr.disabled]="true" class="form-control incInpt" placeholder="Brand Name" required >
+                                <span class="btn btn-sm btn-dark sm_add_item_remove op0" (click)="remove(i)"><i class="fas fa-trash"></i></span>
+                            </div>
+                        </div>
+                    <!-- increase box do not delete end -->
+                    </div>
+                </div>
+            </div>
+        </div><!-- .page_content -->

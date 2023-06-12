@@ -1,0 +1,131 @@
+<div class="main_section">
+    <header class="main_header">
+        <div class="header_logo">
+            <div class="logo_img">
+                 <a href="./index.html" title="Dashboard">
+                    <img src="./assets/images/logo.png" />
+                 </a>
+            </div>
+        </div>
+        <div class="admin_welcome text-center"><span class="h5 pt-4 dBlock">Welcome Admin...</span></div>
+        <div class="usrMenu" (click)="userMenu()">
+            <div class="user_menu_icon cPointer">
+                <i class="fas fa-user"></i>
+            </div>
+            <ul class="usrMenuBox"  [ngClass]="{'trf_scaleY1': isEnable, 'trf_scaleY0': !isEnable}">
+                <li><a [routerLink]="['reset']" title="Reset Password"><i class="fas fa-sync-alt"></i> Reset Password</a></li>
+                <li><a href="./login.html" title="Logout"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+            </ul>
+        </div>
+    </header><!-- .main_header -->
+    
+    <!-- Left menu start -->
+    <div class="left_menu left_m_w910px">
+        <div class="left_menu_box">
+            <div class="menu_toggler cPointer" title="Hide Menu"><i class="fas fa-angle-left"></i></div>
+            <ul class="left_menu_wrapper">
+                <li class="left_menu_item" data-toggle="collapse" data-target="#master_data_manage" aria-expanded="false" aria-controls="mtdhead" clickVal="0">
+                    <span class="cPointer">Master Data Management</span>
+                    <i class="fas fa-angle-down meniItemCollaps"></i>
+                </li>
+                    <ul class="left_menu_sub_box collapse" id="master_data_manage" data-parent=".left_menu_wrapper">
+                        <li class="left_menu_sub_item left_m_dbl" data-toggle="collapse" data-target="#stlm_data" aria-expanded="false" aria-controls="smtdHead" clickVal="0">
+                            <span class="cPointer">Steel Master Data</span>
+                            <i class="fas fa-angle-down meniItemCollaps  meniItemCollapsActive"></i>
+                        </li>
+                            <ul class="left_menu_sub_box collapse" id="stlm_data" data-parent="#master_data_manage">
+                                <li class="left_item_dbl_sub_item"><a [routerLink]="['addBrands']">Add Brands</a></li>
+                                <li class="left_item_dbl_sub_item"><a [routerLink]="['addShape']">Add shapes</a></li>
+                                <li class="left_item_dbl_sub_item"><a [routerLink]="['addSize']">Add sizes</a></li>
+                                <li class="left_item_dbl_sub_item"><a [routerLink]="['addMaterial']">Add Material Category</a></li>
+                            </ul>
+                        <li class="left_menu_sub_item left_m_dbl" data-toggle="collapse" data-target="#ricms_data" aria-expanded="false" aria-controls="ricmsHead" clickVal="0">
+                            <span class="cPointer">Rice Master Data</span>
+                            <i class="fas fa-angle-down meniItemCollaps"></i>
+                        </li>
+                            <ul class="left_menu_sub_box collapse" id="ricms_data" data-parent="#master_data_manage">
+                                <li class="left_item_dbl_sub_item"><a href="#">#</a></li>
+                            </ul>
+                    </ul>
+                <li class="left_menu_item" data-toggle="collapse" data-target="#distr_report" aria-expanded="false" aria-controls="collapse1" clickVal="0">
+                    <span class="cPointer">Distributors Management</span>
+                    <i class="fas fa-angle-down meniItemCollaps"></i>
+                </li>
+                    <ul class="left_menu_sub_box collapse" id="distr_report" data-parent=".left_menu_wrapper">
+                        <li class="left_menu_sub_item"><a [routerLink]="['distributor-report']">Distributor Report</a></li>
+                    </ul>
+                <li class="left_menu_item" data-toggle="collapse" data-target="#retail_report" aria-expanded="false" aria-controls="collapse1" clickVal="0">
+                    <span class="cPointer">Retailers Management</span>
+                    <i class="fas fa-angle-down meniItemCollaps"></i>
+                </li>
+                    <ul class="left_menu_sub_box collapse" id="retail_report" data-parent=".left_menu_wrapper">
+                        <li class="left_menu_sub_item"><a [routerLink]="['retail-report']">Retailer Report</a></li>
+                    </ul>
+            </ul><!-- .left_menu_wrapper -->
+        </div><!-- .left_menu_box -->
+    </div><!-- .left_menu -->
+    
+    <!-- icon menu -->
+    <div class="icon_menu dNone">
+        <ul class="icon_menu_box">
+            <li class="icon_menu_item imenu910" title="Show Menu">
+                <span class="icon_menu_i main_body_toggler" title="Master Data Management"><i class="fas fa-angle-right"></i></span>
+            </li>
+            <li class="icon_menu_item" title="Home">
+                <a href="./index.html" class="icon_menu_i"><i class="fas fa-home"></i></a>
+            </li>
+            <li class="icon_menu_item">
+                <span class="icon_menu_i" title="Master Data Management">
+                    <i class="fas fa-server"></i>
+                </span>
+                <ul class="icon_menu_sub_menu">
+                    <span class="icon_sub_head cPointer font-weight-bold">Master Data Management</span>
+                    <span class="icon_sub_head cPointer">Steel Master Data</span>
+                    <li class="icon_menu_sub_item"><a [routerLink]="['./addBrands']">Add Brands</a></li>
+                    <li class="icon_menu_sub_item"><a href="./add-steel-shape.html">Add shapes</a></li>
+                    <li class="icon_menu_sub_item"><a href="./add-steel-size.html">Add sizes</a></li>
+                    <li class="icon_menu_sub_item"><a href="./add-steel-matrial-category.html">Add Material Category</a></li>
+                    
+                    <span class="icon_sub_head cPointer">Rice Master Data</span>
+                    <li class="icon_menu_sub_item"><a href="#">#</a></li>
+                </ul>
+            </li>
+            <li class="icon_menu_item">
+                <span class="icon_menu_i" title="Distributors Management">
+                    <i class="fas fa-cubes"></i>
+                </span>
+                <ul class="icon_menu_sub_menu">
+                    <span class="icon_sub_head cPointer">Distributors Management</span>
+                    <li class="icon_menu_sub_item"><a href="./dis-report.html">Distributor Report</a></li>
+                </ul>
+            </li>
+            <li class="icon_menu_item">
+                <span class="icon_menu_i" title="Retailers Management">
+                    <i class="fas fa-store"></i>
+                </span>
+                <ul class="icon_menu_sub_menu">
+                    <span class="icon_sub_head cPointer">Retailers Management</span>
+                    <li class="icon_menu_sub_item"><a href="./retail-report.html">Retailer Report</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div><!-- .icon_menu -->
+    
+    <!-- Left menu end -->
+    
+    <!-- Main content body Start-->
+    <div class="main_body">
+        <div class="allPages">
+            <router-outlet>
+        </router-outlet>
+        </div><!-- .allPages -->
+    </div><!-- .main_body -->
+    <!-- Main content body End-->
+
+    <!-- footer start -->
+    <footer>
+        <div class="text-center p-1"><a href="./index.html" class="text-light">&copy; 2023 All Rights Reserved</a></div>
+    </footer>
+    <!-- footer end -->		
+    
+</div>
